@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="icon" type="image/png" href="path-to-your-favicon"/> -->
+    <title>Weather App: Know the weather of any location</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container flex">
+      <div class="box flex">
+        <h2>WEATHER APP</h2>
+        <div class="top_btn_box flex">
+          <div class="btn">Your Weather</div>
+          <div class="btn">Search Weather</div>
+        </div>
+        <div class="weather_element">
+          <!-- Grant Accesss element -->
+          <div class="grant_access flex">
+            <img
+              src="./assets/icons8-location-64.png"
+              alt="location..."
+              loading="lazy"
+            />
+            <!-- Best practise is to use loading as lazy in every img -->
+            <span>Grant location access</span>
+            <p>Allow access to get Weather Access Information</p>
+            <div class="btn access_btn">Grant Access</div>
+          </div>
+
+          <!-- Serach bar-->
+          <form class="flex search_bar">
+            <input type="text" id="inp" placeholder="Search for city..." />
+            <button class="search_btn btn"><i class="fa fa-search"></i></button>
+          </form>
+
+          <!-- Loding Page -->
+          <div class="loading_element">
+            <img src="./assets/loading_gify.webp" alt="loading..." />
+            <span>Loading...</span>
+          </div>
+
+          <!-- Weather info -->
+          <div class="weather_info flex">
+            <div class="flex">
+              <span id="city">Lucknow</span>
+              <img
+                src="./assets/icons8-location-64.png"
+                alt="country flag..."
+                id="country_flag"
+              />
+            </div>
+            <p id="weather_condition">Rainy</p>
+            <img src="./assets/icons8-location-64.png" id="weather_img" />
+            <h2><span id="temp">24.3</span>°C</h2>
+            <div class="flex weather_d">
+              <div class="weather_description flex">
+                <img src="./assets/wind.png" alt="windspeed.."/>
+                <div class="text_size">WINDSPEED</div>
+                <div class="text_size" id="windspeed">12.3 Km/h</div>
+              </div>
+              <div class="weather_description flex">
+                <img src="./assets/humidity.png" alt="humidity.." />
+                <div class="text_size">HUMIDITY</div>
+                <div class="text_size" id="humidity">40%</div>
+              </div>
+              <div class="weather_description flex">
+                <img src="./assets/rain.png" alt="clouds.." />
+                <div class="text_size">CLOUDS</div>
+                <div class="text_size" id="clouds">4%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="not_found">
+          <h2>Sorry Location Not Found!!!</h2>
+          <img src="./assets/not-found.png" alt="">
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/bab29e4943.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
